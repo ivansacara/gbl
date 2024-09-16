@@ -38,7 +38,7 @@ if (
     <strong>Message:</strong><br>$message
   ";
 
-  mail("sales@trip2expo.com", $subject, $messageContent, $headers);
+  mail("ivansacara@gmail.com", $subject, $messageContent, $headers);
 } else {
   http_response_code(400);
 }
