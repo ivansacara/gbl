@@ -3,7 +3,6 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /img/
 Disallow: /manifest.webmanifest
-Disallow: /terms.html
 Disallow: /privacy.html
 
 Sitemap: https://affrepublic.com/sitemap.xml
