@@ -1,0 +1,18 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    # Устанавливаем срок хранения всех файлов на 7 дней
+    ExpiresByType text/html "access plus 7 days"
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType application/x-javascript "access plus 7 days"
+    ExpiresByType image/jpeg "access plus 7 days"
+    ExpiresByType image/png "access plus 7 days"
+    ExpiresByType image/gif "access plus 7 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Устанавливаем заголовок Cache-Control для всех типов файлов на 7 дней
+    <FilesMatch "\.(html|css|js|jpg|jpeg|png|gif)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+</IfModule>
