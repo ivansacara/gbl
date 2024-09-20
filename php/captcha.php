@@ -6,7 +6,7 @@ $response = null;
 require_once './classes/recaptcha/src/autoload.php';
 
 $recaptcha = new \ReCaptcha\ReCaptcha($secret);
-$resp      = $recaptcha->setExpectedHostname('affrepublic.com')
+$resp      = $recaptcha->setExpectedHostname('gbl-factory.com')
   ->verify($_POST["g-recaptcha-response"], $_SERVER["REMOTE_ADDR"]);
 if (!$resp->isSuccess()) {
   $errors = $resp->getErrorCodes();
